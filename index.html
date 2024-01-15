@@ -128,17 +128,30 @@
                 document.getElementById("error").innerText = 'Ошибка в номере';
                 return;
             }
-             let data = {
+            
+
+
+            let data = {
             name: name,
             email: email,
             phone: phone
-            }
+        }
 
 
-            tg.close();
+        tg.setData(JSON.stringify(data));
+
+        tg.close();
+
+
             
         })
 
+
+
+
+    </script>
+</body>
+</html>
 
     </script>
 </body>
