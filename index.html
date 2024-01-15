@@ -128,9 +128,15 @@
                 document.getElementById("error").innerText = 'Ошибка в номере';
                 return;
             }
-            
+             let data = {
+            name: name,
+            email: email,
+            phone: phone
+            }
+
 
             tg.close();
+            
         })
 
 
