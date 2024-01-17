@@ -83,7 +83,7 @@
 <body>
     <div id="main">
         <h1>Онлайн магазин</h1>
-        <img width="200" src="img\pizza.png">
+        <img width="200" src="https://gas-kvas.com/uploads/posts/2023-08/1691917131_gas-kvas-com-p-risunki-na-prazdnik-den-pitstsi-pepperoni-46.jpg">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vehicula tempus congue. </p>
         <button id="buy"> Купить </button>
     </div>
@@ -92,7 +92,7 @@
         <input type="text" placeholder="Email" id="user_email">
         <input type="text" placeholder="Телефон" id="user_phone">
         <div id="error"></div>
-        <button id="order">Оформить</button>
+        <button id="order" type="button">Оформить</button>
 
     </form>
     
@@ -107,7 +107,6 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name  + " " +tg.initDataUnsafe.user.last_name;
         })
 
         order.addEventListener("click", () => {
@@ -137,10 +136,9 @@
             phone: phone
         }
 
-
         tg.setData(JSON.stringify(data));
 
-        
+        tg.close();
 
 
             
@@ -149,9 +147,6 @@
 
 
 
-    </script>
-</body>
-</html>
     </script>
 </body>
 </html>
