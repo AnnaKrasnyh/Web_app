@@ -136,10 +136,16 @@
         }
 
 
+       
         tg.setData(JSON.stringify(data));
 
-        WebApp.close();
+        document.getElementById("error").innerText = 'Готово';
 
+        tg.close();
+
+
+            
+        })
 
         })
 
